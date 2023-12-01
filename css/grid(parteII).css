@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    background-color: aquamarine;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    grid-template-rows: 15vh minmax(80vh, auto) 5vh;
+    grid-template-areas: 
+        'header header' /* Esta es la primera fila con 2 columnas */
+        'content aside' /* Esta es la segunda fila con 2 columnas */
+        'footer footer' /* Esta es la tercer fila con 2 columnas */
+    ;
+}
+
+
+h1, h2, footer>p{
+    color: white;
+}
+
+header{
+    background-color: black;
+    grid-area: header;
+}
+
+section{
+    background-color: brown;
+    grid-area: content;
+}
+
+aside{
+    background-color: olivedrab;
+    grid-area: aside;
+}
+
+footer{
+    background-color: grey;
+    grid-area: footer;
+}
